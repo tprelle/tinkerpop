@@ -405,30 +405,30 @@
         </plugins>
     </build>
 
-    <profiles>
-        <profile>
-            <!-- Continuous Integration - skips gryo process tests as we push the time limit of builds in Travis -->
-            <id>ci</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-                <property>
-                    <name>ci</name>
-                </property>
-            </activation>
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            &lt;!&ndash; Continuous Integration - skips gryo process tests as we push the time limit of builds in Travis &ndash;&gt;-->
+<!--            <id>ci</id>-->
+<!--            <activation>-->
+<!--                <activeByDefault>false</activeByDefault>-->
+<!--                <property>-->
+<!--                    <name>ci</name>-->
+<!--                </property>-->
+<!--            </activation>-->
 
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-failsafe-plugin</artifactId>
-                        <configuration>
-                            <excludes>
-                                <exclude>SparkGryoSerializerGraphComputerProcessIntegrateTest.java</exclude>
-                            </excludes>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
+<!--            <build>-->
+<!--                <plugins>-->
+<!--                    <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-failsafe-plugin</artifactId>-->
+<!--                        <configuration>-->
+<!--                            <excludes>-->
+<!--                                <exclude>SparkGryoSerializerGraphComputerProcessIntegrateTest.java</exclude>-->
+<!--                            </excludes>-->
+<!--                        </configuration>-->
+<!--                    </plugin>-->
+<!--                </plugins>-->
+<!--            </build>-->
+<!--        </profile>-->
+<!--    </profiles>-->
 </project>
